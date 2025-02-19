@@ -92,7 +92,7 @@ const ASCIISphere: React.FC = () => {
       p5.rotateZ(rotation);
       p5.rotateY(p5.PI / 2);
       p5.rotateX(p5.PI);
-      p5.fill(150, 8);
+      p5.fill(150, 5);
       p5.text(point.char, 0, 0);
       p5.pop();
     });
