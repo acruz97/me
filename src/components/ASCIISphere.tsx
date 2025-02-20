@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import Sketch from 'react-p5';
 import p5Types from 'p5';
-import './ASCIISphere.css'; // Ensure you import the CSS
 
 interface Point {
   pos: p5Types.Vector;
@@ -11,9 +10,9 @@ interface Point {
 }
 
 const ASCIISphere: React.FC = () => {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*' +
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*' + 
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*' +
-    'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん' +  // Hiragana
+    'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん' + // Hiragana
     'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン' +  // Katakana
     '日月火水木金土愛心星空雨雪風花鳥魚龍虎川山海光闇';  // Common Kanji
 
@@ -92,7 +91,7 @@ const ASCIISphere: React.FC = () => {
       p5.rotateZ(rotation);
       p5.rotateY(p5.PI / 2);
       p5.rotateX(p5.PI);
-      p5.fill(150, 5);
+      p5.fill(150, isDarkMode ? 3 : 10);
       p5.text(point.char, 0, 0);
       p5.pop();
     });
