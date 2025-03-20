@@ -32,7 +32,7 @@ export const projects = [
         url: ""
     },
     {
-        name: "Domain CLI",
+        name: "Developer Toolkit",
         description: "Created a CLI tool that automates React component and page generation for Discover Bank's Call Center platform. Reduced development time by implementing templates for common patterns and enforcing best practices through standardized boilerplate code.",
         date: "Dec 2023",
         logo: "🧰",
