@@ -36,7 +36,7 @@ const SquiggleMask: React.FC<{ children: React.ReactNode }> = ({ children }) => 
               transform: translateX(0);
             }
             100% {
-              transform: translateX(-100px);
+              transform: translateX(100px);
             }
           }
         `}
