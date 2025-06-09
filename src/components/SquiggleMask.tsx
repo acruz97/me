@@ -24,9 +24,23 @@ const SquiggleMask: React.FC<{ children: React.ReactNode }> = ({ children }) => 
         maskImage: `url("data:image/svg+xml;utf8,${encodeURIComponent(SQUIGGLE_SVG)}")`,
         maskRepeat: 'repeat',
         maskSize: '100px 100px',
+        transform: 'translateX(0)',
+        animation: 'scrollSquiggles 20s linear infinite',
       }}
     >
       {children}
+      <style>
+        {`
+          @keyframes scrollSquiggles {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-100px);
+            }
+          }
+        `}
+      </style>
     </div>
   );
 };
