@@ -13,9 +13,9 @@ function App() {
       <SquiggleMask>
         <RainbowCursor />
       </SquiggleMask>
-      <div className="absolute inset-0 flex ">
+      {/* <div className="absolute inset-0 flex ">
         <ASCIISphere />
-      </div>
+      </div> */}
       <div className="absolute inset-0 flex ">
         <div className="container mx-auto p-4">
           <header className="flex justify-between items-center m-4">
