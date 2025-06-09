@@ -4,10 +4,15 @@ import ListItem from './components/ListItem';
 import { workExperience } from './assets/workExperience';
 import { projects } from './assets/projects';
 import ASCIISphere from './components/ASCIISphere'
+import RainbowCursor from './components/RainbowCursor';
+import SquiggleMask from './components/SquiggleMask';
 
 function App() {
   return (
     <>
+      <SquiggleMask>
+        <RainbowCursor />
+      </SquiggleMask>
       <div className="absolute inset-0 flex ">
         <ASCIISphere />
       </div>
