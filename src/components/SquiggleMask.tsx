@@ -1,10 +1,10 @@
 import React from 'react';
 
 const SQUIGGLE_SVG = `
-  <svg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'>
-    <path d='M0,50 Q25,25 50,50 T100,50' stroke='white' fill='none' stroke-width='1'/>
-    <path d='M0,30 Q25,5 50,30 T100,30' stroke='white' fill='none' stroke-width='1'/>
-    <path d='M0,70 Q25,45 50,70 T100,70' stroke='white' fill='none' stroke-width='1'/>
+  <svg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'>
+    <path d='M0,100 Q50,50 100,100 T200,100' stroke='white' fill='none' stroke-width='1'/>
+    <path d='M0,60 Q50,10 100,60 T200,60' stroke='white' fill='none' stroke-width='1'/>
+    <path d='M0,140 Q50,90 100,140 T200,140' stroke='white' fill='none' stroke-width='1'/>
   </svg>
 `;
 
@@ -20,10 +20,10 @@ const SquiggleMask: React.FC<{ children: React.ReactNode }> = ({ children }) => 
         zIndex: 40,
         WebkitMaskImage: `url("data:image/svg+xml;utf8,${encodeURIComponent(SQUIGGLE_SVG)}")`,
         WebkitMaskRepeat: 'repeat',
-        WebkitMaskSize: '100px 100px',
+        WebkitMaskSize: '200px 200px',
         maskImage: `url("data:image/svg+xml;utf8,${encodeURIComponent(SQUIGGLE_SVG)}")`,
         maskRepeat: 'repeat',
-        maskSize: '100px 100px',
+        maskSize: '200px 200px',
       }}
     >
       {children}
