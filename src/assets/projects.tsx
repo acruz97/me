@@ -1,7 +1,7 @@
 export const projects = [
     {
         name: "Discover Spend Analyzer",
-        description: "Developed a customer-facing web application serving 60M+ cardholders that visualizes spending patterns and financial insights. Built interactive data visualizations for transaction analysis and annual spending summaries, with seamless integration across mobile and desktop platforms.",
+        description: "Built a React-based web app for 60M+ Discover cardholders, delivering interactive visualizations of spending patterns and financial insights. Ensured seamless performance across mobile and desktop, enhancing user engagement and financial decision-making.",
         date: "May 2020",
         logo: "💳",
         href: true,
@@ -9,7 +9,7 @@ export const projects = [
     },
     {
         name: "Automated Test Suite",
-        description: "Designed and implemented a JavaScript-based automated testing framework for desktop applications, replacing manual testing workflows. Reduced testing time while improving accuracy and standardizing evidence collection procedures.",
+        description: "Developed a JavaScript-based testing framework using Cucumber for desktop applications, replacing manual workflows. Streamlined testing processes, improving accuracy and standardizing evidence collection for consistent results.",
         date: "May 2021",
         logo: "🤖",
         href: false,
@@ -17,7 +17,7 @@ export const projects = [
     },
     {
         name: "React Component Library",
-        description: "Created a comprehensive React component library for Discover Bank's Call Center platform, featuring reusable UI elements and standardized design patterns. Implemented Storybook documentation for improved component discovery and stakeholder collaboration.",
+        description: "Created a reusable React component library for Discover Bank’s Call Center platform, integrated with Storybook for efficient documentation. Standardized UI elements to improve consistency and accelerate application development.",
         date: "March 2022",
         logo: "📚",
         href: false,
@@ -25,7 +25,7 @@ export const projects = [
     },
     {
         name: "Call Center Web Applications",
-        description: "Built and deployed a suite of React applications for Discover Bank's call center agents, optimizing payment processing and transaction management workflows. Improved agent efficiency and reduced average call handling time while enabling observability.",
+        description: "Developed a suite of React applications for Discover Bank’s call center agents, optimizing payment and transaction workflows. Enhanced agent efficiency and streamlined call handling with integrated observability features.",
         date: "Jan 2023",
         logo: "📞",
         href: false,
@@ -33,7 +33,7 @@ export const projects = [
     },
     {
         name: "Developer Toolkit",
-        description: "Created a CLI tool that automates React component and page generation for Discover Bank's Call Center platform. Reduced development time by implementing templates for common patterns and enforcing best practices through standardized boilerplate code.",
+        description: "Built a Node.js-based CLI tool to automate React component and page generation for Discover Bank’s Call Center platform. Accelerated development workflows by providing standardized templates and enforcing best practices.",
         date: "Dec 2023",
         logo: "🧰",
         href: false,
