@@ -31,7 +31,7 @@ function App() {
                 </a>
               </h1>
               <p className="text-sm">
-                Chicago-based Software Engineer with over four years of specialized experience in the financial services sector. Demonstrated expertise in managing and resolving business-critical incidents and mitigating risks, ensuring operational continuity. Proficient in both maintaining legacy codebases and developing modern web applications, leveraging the latest technologies and adhering to industry best practices to deliver robust, scalable solutions.
+              Chicago-based Software Engineer with 4+ years in financial services, delivering robust web applications for Discover Card & Bank. I specialize in building scalable solutions, resolving critical incidents, and modernizing legacy systems with tools like React and Spring Boot. Explore my work to see how I drive efficiency and innovation.
               </p>
             </div>
           </header>
