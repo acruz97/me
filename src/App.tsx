@@ -3,6 +3,7 @@ import './index.css';
 import ListItem from './components/ListItem';
 import { workExperience } from './assets/workExperience';
 import { projects } from './assets/projects';
+import { skills } from './assets/skills';
 import ASCIISphere from './components/ASCIISphere'
 import RainbowCursor from './components/RainbowCursor';
 import SquiggleMask from './components/SquiggleMask';
@@ -31,7 +32,7 @@ function App() {
                 </a>
               </h1>
               <p className="text-sm">
-              Chicago-based Software Engineer with 4+ years in financial services, delivering robust web applications for Discover Card & Bank. I specialize in building scalable solutions, resolving critical incidents, and modernizing legacy systems with tools like React and Spring Boot. Explore my work to see how I drive efficiency and innovation.
+              Chicago-based Software Engineer with 4+ years in financial services, delivering robust web applications for Discover Card & Bank. I specialize in building scalable solutions, resolving critical incidents, and modernizing legacy systems using React and Spring Boot in Agile environments. Explore my work to see how I drive efficiency and innovation through collaborative, iterative development.
               </p>
             </div>
           </header>
@@ -39,6 +40,10 @@ function App() {
             <h2 className="text-xl font-semibold">Work</h2>
             <ul className="space-y-4">
               {workExperience.map((item, index) => <ListItem item={item} index={index} />)}
+            </ul>
+            <h2 className="text-xl font-semibold">Skills</h2>
+            <ul className="space-y-4">
+              {skills.map((item, index) => <ListItem item={item} index={index} />)}
             </ul>
             <h2 className="text-xl font-semibold">Projects</h2>
             <ul className="space-y-4">
