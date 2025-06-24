@@ -1,7 +1,7 @@
 export const skills = [
     {
         name: "Frontend",
-        description: "React, TypeScript, JavaScript, HTML, CSS, Tailwind, Bootstrap, Material UI, Ant Design, Storybook, Jest, Enzyme, React Testing Library, Playwright, Puppeteer, SWT, Eclipse",
+        description: "React, TypeScript, JavaScript, HTML, CSS, Storybook, Jest, Playwright, SWT, Eclipse",
         date: "",
         logo: "🖼️",
         href: false,
@@ -9,7 +9,7 @@ export const skills = [
     },
     {
         name: "Backend",
-        description: "Spring Boot, Java, REST, SOAP, NodeJS, GraphQL",
+        description: "Java, Spring Boot, NodeJS",
         date: "",
         logo: "🧠",
         href: false,
