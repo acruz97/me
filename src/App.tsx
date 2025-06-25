@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 import ListItem from './components/ListItem';
-import { workExperience } from './assets/workExperience';
+import { experience } from './assets/experience';
 import { projects } from './assets/projects';
 import { skills } from './assets/skills';
 import ASCIISphere from './components/ASCIISphere'
@@ -39,7 +39,7 @@ function App() {
           <main className="space-y-8 m-4">
             <h2 className="text-xl font-semibold">Work</h2>
             <ul className="space-y-4">
-              {workExperience.map((item, index) => <ListItem item={item} index={index} />)}
+              {experience.map((item, index) => <ListItem item={item} index={index} />)}
             </ul>
             <h2 className="text-xl font-semibold">Skills</h2>
             <ul className="space-y-4">

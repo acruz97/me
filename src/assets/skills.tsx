@@ -17,7 +17,7 @@ export const skills = [
     },
     {
         name: "Tools",
-        description: "Git, GitHub, Jira, Jenkins, PCF, OCP, Instana, AppDynamics, ElasticSearch, DataDog, Cucumber, Bash, Powershell, Python, Groovy, Gherkin, VBScript",
+        description: "SQL, Git, GitHub, Jenkins, PCF, OCP, Instana, AppDynamics, ElasticSearch, DataDog, Cucumber, Bash, Powershell, Python, Groovy, Gherkin, VBScript",
         date: "",
         logo: "🔨",
         href: false,
