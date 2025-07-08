@@ -17,7 +17,7 @@ function App() {
       {/* <div className="absolute inset-0 flex ">
         <ASCIISphere />
       </div> */}
-      <div className="flex min-h-screen">
+      <div className="flex min-h-[100dvh]">
         <div className="container mx-auto p-4">
           <header className="flex justify-between items-center m-4">
             <div>
