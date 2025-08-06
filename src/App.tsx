@@ -32,7 +32,7 @@ function App() {
                 </a>
               </h1>
               <p className="text-sm">
-              I am a Chicago-based Software Engineer with over 4 years of experience in the financial services industry where I have been delivering robust web applications for Discover Card & Bank. I specialize in building scalable solutions, resolving critical incidents, and modernizing legacy systems using technologies like React and Spring Boot in Agile environments.
+              I am a Chicago-based Software Engineer with over 5 years of experience in the financial services industry, where I have been delivering robust web applications for Discover Card & Bank. I specialize in building scalable solutions, resolving critical incidents, and modernizing legacy systems using technologies like React and Spring Boot in Agile environments.
               </p>
             </div>
           </header>
