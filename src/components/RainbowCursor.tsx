@@ -22,7 +22,7 @@ const RainbowCursor: React.FC = () => {
       style={{
         width: 100,
         height: 100,
-        background: 'radial-gradient(circle, rgba(147,51,234,0.3) 0%, rgba(59,130,246,0.3) 100%)',
+        background: 'radial-gradient(circle, rgba(59,130,246,0.3) 0%, rgba(37,99,235,0.3) 100%)',
         borderRadius: '50%',
         filter: 'blur(20px)',
         mixBlendMode: 'screen'
