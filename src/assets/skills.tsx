@@ -9,7 +9,7 @@ export const skills = [
     },
     {
         name: "Backend",
-        description: "Java, Spring Boot, NodeJS",
+        description: "NodeJS, Java, Spring Boot",
         date: "",
         logo: "🧠",
         href: false,
