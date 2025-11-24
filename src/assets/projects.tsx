@@ -4,8 +4,8 @@ export const projects = [
         description: "Built a React-based web app for 60M+ Discover cardholders, delivering interactive visualizations of spending patterns and financial insights. Ensured seamless performance across mobile and desktop, enhancing user engagement and financial decision-making.",
         date: "May 2020",
         logo: "💳",
-        href: true,
-        url: "https://card-e.em.discover.com/pub/cc?_ri_=X0Gzc2X%3DAQpglLjHJlYQGqDazbuhqGJFEPzgjEbqtOMBTzg9l3IudA2KCsC3Sqzb0cDzbzaza3zdyWl9bOVXtpKX%3DWUYRURY&_ei_=EXLKxNIdsu2GyUdXVbEPojum9gosJicZK21eij9DcuhqZ-o1p8-aNEgNtdIp1Wpl12pjYtwerAantdhGkag6XJvVMVhNZdOSMfhXy7Z1CLOEfUhqI0YQvcdcXBXkmGP8wO2pdhcaI0zt-xv_7FoFbYqEWWH4W5HrLr-aXTk2jj_JayhJjLdS2KvNyMjeoOinmrSFGdsc5IzAJPOwn5OJFLGcJTIN1NfA0oOZpaatmV4Lkzm63UdC8ly7qnGfimTQaxW3PouJa4g9D2Kz4RzCJJ8_Qs0itP3cQz1tZ8mULQUve_EZWYyMCYbrZz6U4-f8ijqakrmCsvDr5UgyxIVqaNnCUXj6N72qhzhRUWppKpdUUs5cxu7IahWo.&_di_=819g84j3d36ihanh6d3fcg538bjbtg0r4e7bho86vqht4vjq4g00"
+        href: false,
+        url: ""
     },
     {
         name: "Automated Test Suite",
