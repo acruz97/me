@@ -31,7 +31,6 @@ body::before {
 }
 
 a {
-  font-weight: 500;
   color: #3b82f6;
   text-decoration: inherit;
 }
