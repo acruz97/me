@@ -29,7 +29,7 @@ function App() {
             Chicago, IL · Software Engineer
           </p>
           <p className="text-sm text-slate-600 dark:text-white/70">
-            I am a Chicago-based Software Engineer with over 5 years of experience in the financial services industry, where I have been delivering robust web applications for Discover Card & Bank. I specialize in building scalable solutions, resolving critical incidents, and modernizing legacy systems using technologies like React and Spring Boot in Agile environments.
+            I am a Chicago-based Software Engineer with over 5 years of experience in the financial services industry. I deliver robust web applications for Discover Card & Bank, specializing in building scalable solutions, resolving critical incidents, and modernizing legacy systems using React and Spring Boot in agile environments.
           </p>
         </SectionCard>
 

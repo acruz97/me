@@ -1,7 +1,7 @@
 export const projects = [
     {
         name: "Discover Spend Analyzer",
-        description: "Built a React-based web app for 60M+ Discover cardholders, delivering interactive visualizations of spending patterns and financial insights. Ensured seamless performance across mobile and desktop, enhancing user engagement and financial decision-making.",
+        description: "Built a React-based web application for over 60 million Discover cardholders, delivering interactive visualizations of spending patterns and financial insights. Ensured seamless performance across mobile and desktop platforms, enhancing user engagement and financial decision-making.",
         date: "May 2020",
         logo: "💳",
         href: false,
@@ -17,7 +17,7 @@ export const projects = [
     },
     {
         name: "React Component Library",
-        description: "Created a reusable React component library for Discover Bank’s Call Center platform, integrated with Storybook for efficient documentation. Standardized UI elements in order to maintain a high level of code quality, accelerate application development, and enhance collaboration between engineers and process owners.",
+        description: "Created a reusable React component library for Discover Bank's Call Center platform, integrated with Storybook for efficient documentation. Standardized UI elements to maintain high code quality, accelerate application development, and enhance collaboration between engineers and process owners.",
         date: "March 2022",
         logo: "📚",
         href: false,
@@ -25,7 +25,7 @@ export const projects = [
     },
     {
         name: "Call Center Web Applications",
-        description: "Developed various React applications for Discover Bank’s call center agents, used to service customers over the phone. Optimized workflows such as payment and transactions. Enhanced agent efficiency and streamlined call handling with simplified workflows, automation, and integrated observability features.",
+        description: "Developed various React applications for Discover Bank's call center agents to service customers over the phone. Optimized workflows including payments and transactions. Enhanced agent efficiency and streamlined call handling through simplified workflows, automation, and integrated observability features.",
         date: "Jan 2023",
         logo: "📞",
         href: false,
