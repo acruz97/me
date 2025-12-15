@@ -14,7 +14,7 @@ type ListItemProps = {
 
 const ListItem: React.FC<ListItemProps> = ({ item }) => {
   return (
-    <li className="flex flex-wrap gap-4 py-4">
+    <li className="group flex flex-wrap gap-4 py-4">
       {item.logo && (
         <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-slate-100 text-2xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12 dark:bg-white/5">
           {item.logo}
