@@ -2,25 +2,34 @@ import React from 'react';
 
 const ListItem = ({ item, index }) => {
     return (
-        <li key={index} className="flex">
-            <span className="mr-4">{item.logo}</span>
+        <li key={index} className="flex" style={{borderBottom: '1px dotted #ddd', paddingBottom: '1rem'}}>
+            <span className="mr-4" style={{fontSize: '1.5rem'}}>{item.logo}</span>
             <div>
-                <h3 className="font-semibold">
+                <h3 style={{fontWeight: '400', marginBottom: '0.25rem'}}>
                     {item.href ? (
-                        <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">
+                        <a href={item.url} target="_blank" rel="noopener noreferrer">
                             {item.name}
                         </a>
                     ) : (
-                        item.name
+                        <span style={{color: '#4169E1'}}>{item.name}</span>
                     )}
                     {item.isCurrent && (
-                        <span className="bg-yellow-200 text-yellow-800 text-xs font-semibold m-2 px-2.5 py-0.5 rounded">
+                        <span style={{
+                            backgroundColor: '#4169E1',
+                            color: 'white',
+                            fontSize: '0.65rem',
+                            fontWeight: '400',
+                            marginLeft: '0.5rem',
+                            padding: '0.15rem 0.5rem',
+                            borderRadius: '3px',
+                            letterSpacing: '0.05em'
+                        }}>
                             CURRENT
                         </span>
                     )}
                 </h3>
-                <p className="text-sm">{item.description}</p>
-                <p className="text-xs text-gray-500">{item.date}</p>
+                <p className="text-sm" style={{color: '#666', marginBottom: '0.25rem'}}>{item.description}</p>
+                <p className="text-xs" style={{color: '#999'}}>{item.date}</p>
             </div>
         </li>
     );

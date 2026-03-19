@@ -10,16 +10,12 @@ interface Point {
 }
 
 const ASCIISphere: React.FC = () => {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*' + 
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*' +
-    'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん' + // Hiragana
-    'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン' +  // Katakana
-    '日月火水木金土愛心星空雨雪風花鳥魚龍虎川山海光闇';  // Common Kanji
+  const chars = '•';  // Simple dot character for minimal aesthetic
 
   const points: Point[] = [];
-  const radius = 250;
-  const totalLat = 25;
-  const totalLon = 35;
+  const radius = 200;
+  const totalLat = 30;
+  const totalLon = 40;
   let font: p5Types.Font;
   let zoom = 3; // Initialize zoom level
 
@@ -55,7 +51,7 @@ const ASCIISphere: React.FC = () => {
   const setup = (p5: p5Types, canvasParentRef: Element) => {
     p5.createCanvas(p5.windowWidth, document.body.scrollHeight, p5.WEBGL).parent(canvasParentRef);
     p5.textFont(font);
-    p5.textSize(24);
+    p5.textSize(16);  // Smaller dots for subtle effect
     p5.textAlign(p5.CENTER, p5.CENTER);
 
     for (let i = 0; i < totalLat; i++) {
@@ -77,8 +73,8 @@ const ASCIISphere: React.FC = () => {
   }
 
   const draw = (p5: p5Types) => {
-    p5.background(isDarkMode ? 30 : 255);
-    const rotationAngle = p5.frameCount * 0.002;
+    p5.clear();  // Transparent background
+    const rotationAngle = p5.frameCount * 0.001;  // Slower rotation
     p5.rotateY(rotationAngle);
 
     p5.scale(zoom);
@@ -91,7 +87,8 @@ const ASCIISphere: React.FC = () => {
       p5.rotateZ(rotation);
       p5.rotateY(p5.PI / 2);
       p5.rotateX(p5.PI);
-      p5.fill(150, isDarkMode ? 3 : 10);
+      // Subtle gray dots
+      p5.fill(180, 180, 180, 150);
       p5.text(point.char, 0, 0);
       p5.pop();
     });
