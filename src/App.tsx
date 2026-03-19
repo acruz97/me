@@ -17,7 +17,7 @@ function App() {
         <div className="max-w-3xl w-full px-8">
           <header className="text-center mb-16">
             <p className="text-xs uppercase tracking-widest mb-4" style={{color: '#888'}}>
-              Chicago-Based Software Engineer
+              Full Stack Software Engineer
             </p>
             <h1 className="text-5xl mb-8" style={{
               fontSize: '4rem',
