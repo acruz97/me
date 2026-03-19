@@ -4,14 +4,15 @@ import ListItem from './components/ListItem';
 import { experience } from './assets/experience';
 import { projects } from './assets/projects';
 import { skills } from './assets/skills';
-import ASCIISphere from './components/ASCIISphere'
+import SquiggleMask from './components/SquiggleMask';
+import RainbowCursor from './components/RainbowCursor';
 
 function App() {
   return (
     <>
-      <div className="absolute inset-0 flex pointer-events-none opacity-30">
-        <ASCIISphere />
-      </div>
+      <SquiggleMask>
+        <RainbowCursor />
+      </SquiggleMask>
       <div className="flex flex-col flex-1 items-center justify-start min-h-screen py-12">
         <div className="max-w-3xl w-full px-8">
           <header className="text-center mb-16">
@@ -56,11 +57,6 @@ function App() {
               </ul>
             </section>
           </main>
-          <footer className="mt-16 text-center">
-            <p className="text-xs" style={{color: '#999'}}>
-              Powered by React + Vite using Vercel
-            </p>
-          </footer>
         </div>
       </div>
     </>

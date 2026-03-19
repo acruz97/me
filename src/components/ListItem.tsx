@@ -2,7 +2,7 @@ import React from 'react';
 
 const ListItem = ({ item, index }) => {
     return (
-        <li key={index} className="flex" style={{borderBottom: '1px dotted #ddd', paddingBottom: '1rem'}}>
+        <li key={index} className="flex" style={{paddingBottom: '1rem'}}>
             <span className="mr-4" style={{fontSize: '1.5rem'}}>{item.logo}</span>
             <div>
                 <h3 style={{fontWeight: '400', marginBottom: '0.25rem'}}>
