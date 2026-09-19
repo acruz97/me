@@ -1,8 +1,30 @@
-# React + Vite
+# Angelo Cruz: Personal Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A single-page portfolio built with React, TypeScript, Vite, and Tailwind CSS v4. Live at https://acruz97.github.io/me/
 
-Currently, two official plugins are available:
+## Develop
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+npm run dev
+```
+
+## Edit content
+
+All page content lives in `src/assets/`:
+
+- `profile.tsx`: name, title, summary, links, highlight stats, and the About blurb
+- `experience.tsx`: work history
+- `projects.tsx`: project cards
+- `skills.tsx`: skill groups
+- `education.tsx`: education
+
+Styling (light and dark themes, responsive layout, print styles) is in `src/index.css`.
+
+## Deploy
+
+```bash
+npm run deploy
+```
+
+This builds the site and publishes `dist/` to the `gh-pages` branch.

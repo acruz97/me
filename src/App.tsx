@@ -1,65 +1,110 @@
-import React from 'react';
-import './index.css';
+import type { ReactNode } from 'react';
 import ListItem from './components/ListItem';
+import { profile } from './assets/profile';
 import { experience } from './assets/experience';
 import { projects } from './assets/projects';
 import { skills } from './assets/skills';
-import SquiggleMask from './components/SquiggleMask';
-import RainbowCursor from './components/RainbowCursor';
+import { education } from './assets/education';
+
+type SectionProps = {
+  id: string;
+  title: string;
+  children: ReactNode;
+};
+
+const Section = ({ id, title, children }: SectionProps) => (
+  <section className="section" aria-labelledby={`${id}-title`}>
+    <h2 className="section-title" id={`${id}-title`}>
+      {title}
+    </h2>
+    {children}
+  </section>
+);
 
 function App() {
   return (
-    <>
-      <SquiggleMask>
-        <RainbowCursor />
-      </SquiggleMask>
-      <div className="flex flex-col flex-1 items-center justify-start min-h-screen py-12">
-        <div className="max-w-3xl w-full px-8">
-          <header className="text-center mb-16">
-            <p className="text-xs uppercase tracking-widest mb-4" style={{color: '#888'}}>
-              Full Stack Software Engineer
-            </p>
-            <h1 className="text-5xl mb-8" style={{
-              fontSize: '4rem',
-              fontWeight: '400',
-              letterSpacing: '0.15em',
-              color: '#4169E1'
-            }}>
-              <a
-                href="https://www.linkedin.com/in/angelo-cruz-is-a-dev"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Angelo Cruz
-              </a>
-            </h1>
-            <p className="text-sm leading-relaxed mx-auto" style={{maxWidth: '600px', color: '#666'}}>
-              I am a Chicago-based Software Engineer with over 5 years of experience in the financial services industry, where I have been delivering robust web applications for Discover Card & Bank. I specialize in building scalable solutions, resolving critical incidents, and modernizing legacy systems using technologies like React and Spring Boot in Agile environments.
-            </p>
-          </header>
-          <main className="space-y-16">
-            <section>
-              <h2 className="text-sm uppercase tracking-widest mb-6" style={{color: '#888'}}>Work</h2>
-              <ul className="space-y-4">
-                {experience.map((item, index) => <ListItem item={item} index={index} />)}
-              </ul>
-            </section>
-            <section>
-              <h2 className="text-sm uppercase tracking-widest mb-6" style={{color: '#888'}}>Skills</h2>
-              <ul className="space-y-4">
-                {skills.map((item, index) => <ListItem item={item} index={index} />)}
-              </ul>
-            </section>
-            <section>
-              <h2 className="text-sm uppercase tracking-widest mb-6" style={{color: '#888'}}>Projects</h2>
-              <ul className="space-y-4">
-                {projects.map((item, index) => <ListItem item={item} index={index} />)}
-              </ul>
-            </section>
-          </main>
+    <div className="page">
+      <header className="hero">
+        <h1>{profile.name}</h1>
+        <p className="role">{profile.title}</p>
+        <p className="summary">{profile.summary}</p>
+
+        <div className="links">
+          {profile.links.map((link) => (
+            <a
+              key={link.href}
+              className="link-btn"
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {link.label}
+            </a>
+          ))}
+          <button type="button" className="link-btn no-print" onClick={() => window.print()}>
+            Print / Save as PDF
+          </button>
         </div>
-      </div>
-    </>
+
+        <ul className="stats" aria-label="Highlights">
+          {profile.stats.map((stat) => (
+            <li key={stat.value}>
+              <span className="stat-value">{stat.value}</span>
+              <span className="stat-label">{stat.label}</span>
+            </li>
+          ))}
+        </ul>
+      </header>
+
+      <main>
+        <Section id="experience" title="Experience">
+          <ul className="entries">
+            {experience.map((item) => (
+              <ListItem key={item.title} item={item} />
+            ))}
+          </ul>
+        </Section>
+
+        <Section id="projects" title="Projects">
+          <ul className="cards">
+            {projects.map((item) => (
+              <ListItem key={item.title} item={item} variant="card" />
+            ))}
+          </ul>
+        </Section>
+
+        <Section id="skills" title="Skills">
+          <div className="skills">
+            {skills.map((group) => (
+              <div key={group.name} className="skill-group">
+                <h3 className="skill-name">{group.name}</h3>
+                <ul className="chips" aria-label={`${group.name} skills`}>
+                  {group.items.map((skill) => (
+                    <li key={skill}>{skill}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <Section id="education" title="Education">
+          <ul className="entries">
+            {education.map((item) => (
+              <ListItem key={item.title} item={item} />
+            ))}
+          </ul>
+        </Section>
+      </main>
+
+      <footer className="footer">
+        <h2 className="section-title">About</h2>
+        <p className="about">{profile.about}</p>
+        <p className="copyright">
+          © {new Date().getFullYear()} {profile.name}
+        </p>
+      </footer>
+    </div>
   );
 }
 
