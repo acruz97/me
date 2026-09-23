@@ -1,5 +1,5 @@
 export const profile = {
-  name: 'Angelo Cruz',
+  name: 'Angelo Thomas Cruz',
   title: 'Full Stack Software Engineer',
   summary:
     'Full stack software engineer with 7+ years of experience in financial services. At Capital One and Discover, I built customer-facing applications and banking platforms with React, TypeScript, and Spring Boot. My work streamlined payments and transactions, reduced production defects, and gave customers and internal teams better tools.',
