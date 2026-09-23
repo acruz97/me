@@ -2,13 +2,15 @@
 
 /* ---------- Design tokens ---------- */
 :root {
-  --bg: #ffffff;
-  --surface: #f5f6f8;
-  --text: #1b1f27;
-  --muted: #566070;
-  --border: #e3e6eb;
+  --bg: #f6f7fb;
+  --surface: rgba(255, 255, 255, 0.78);
+  --text: #141821;
+  --muted: #4f5968;
+  --border: rgba(20, 30, 60, 0.1);
   --accent: #2b4fd0;
-  --accent-soft: #eaefff;
+  --accent-2: #0b8fd6;
+  --accent-soft: rgba(43, 79, 208, 0.09);
+  --glow: rgba(43, 79, 208, 0.16);
   --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
   color-scheme: light dark;
@@ -16,13 +18,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0e1116;
-    --surface: #161b22;
-    --text: #e6e9ee;
-    --muted: #9aa4b2;
-    --border: #252b35;
-    --accent: #8aa4ff;
-    --accent-soft: #1a2340;
+    --bg: #06080d;
+    --surface: rgba(14, 18, 28, 0.72);
+    --text: #e8ecf3;
+    --muted: #9ba6b8;
+    --border: rgba(140, 170, 255, 0.12);
+    --accent: #7ea2ff;
+    --accent-2: #5ee0ff;
+    --accent-soft: rgba(94, 140, 255, 0.12);
+    --glow: rgba(94, 170, 255, 0.22);
   }
 }
 
@@ -77,11 +81,29 @@ button:focus-visible {
   border-radius: 0.375rem;
 }
 
+/* ---------- Background ---------- */
+.neural-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.neural-bg[data-ready="true"] {
+  opacity: 1;
+}
+
 /* ---------- Layout ---------- */
 .page {
+  position: relative;
+  z-index: 1;
   max-width: 48rem;
   margin: 0 auto;
-  padding: 4rem 1.5rem 3rem;
+  padding: clamp(4rem, 12vh, 7rem) 1.5rem 3rem;
 }
 
 .section {
@@ -101,17 +123,66 @@ button:focus-visible {
 
 /* ---------- Hero ---------- */
 .hero h1 {
-  font-size: clamp(2.25rem, 6vw, 3rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  font-size: clamp(2.5rem, 7vw, 3.75rem);
+  font-weight: 750;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  background: linear-gradient(100deg, var(--text) 30%, var(--accent) 75%, var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .role {
-  margin-top: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0.75rem;
   color: var(--accent);
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-family: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.role::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--accent-2);
+  box-shadow: 0 0 0 3px var(--glow), 0 0 12px var(--accent-2);
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0;
+  margin-top: 0.9rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.contact li + li::before {
+  content: "·";
+  margin: 0 0.6rem;
+  color: var(--border);
+}
+
+.contact a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 3px;
+}
+
+.contact a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.print-only {
+  display: none !important;
 }
 
 .summary {
@@ -141,12 +212,13 @@ button:focus-visible {
   font-weight: 500;
   line-height: 1.4;
   cursor: pointer;
-  transition: border-color 0.15s, color 0.15s;
+  transition: border-color 0.15s, color 0.15s, box-shadow 0.15s;
 }
 
 .link-btn:hover {
   border-color: var(--accent);
   color: var(--accent);
+  box-shadow: 0 0 0 3px var(--glow);
 }
 
 .stats {
@@ -167,7 +239,10 @@ button:focus-visible {
 }
 
 .stat-value {
-  color: var(--accent);
+  background: linear-gradient(100deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.2;
@@ -199,6 +274,13 @@ button:focus-visible {
   border: 1px solid var(--border);
   border-radius: 0.75rem;
   background: var(--surface);
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.entry-card:hover {
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  box-shadow: 0 0 0 1px var(--glow), 0 12px 32px -12px var(--glow);
+  transform: translateY(-2px);
 }
 
 .entry-card .chips {
@@ -342,6 +424,12 @@ button:focus-visible {
   font-size: 0.95rem;
 }
 
+.about-note {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
 .copyright {
   margin-top: 2rem;
   color: var(--muted);
@@ -367,20 +455,42 @@ button:focus-visible {
   }
 }
 
-/* ---------- Print / Save as PDF ---------- */
+/* ---------- Print / Save as PDF ----------
+   A single-column, text-only resume layout that ATS software can parse:
+   standard headings, plain-text contact details, no graphics, cards, or columns. */
+@page {
+  size: letter;
+  margin: 0.5in 0.6in;
+}
+
 @media print {
   :root {
     --bg: #ffffff;
     --surface: #ffffff;
     --text: #000000;
-    --muted: #333333;
-    --border: #cccccc;
-    --accent: #1f3a99;
-    --accent-soft: #eef1fb;
+    --muted: #222222;
+    --border: #999999;
+    --accent: #000000;
+    --accent-2: #000000;
+    --accent-soft: transparent;
+    --glow: transparent;
+    --font: Calibri, Arial, Helvetica, sans-serif;
   }
 
+  html,
+  body {
+    background: #ffffff !important;
+    font-size: 10.5pt;
+    line-height: 1.35;
+  }
+
+  .neural-bg,
   .no-print {
     display: none !important;
+  }
+
+  .print-only {
+    display: revert !important;
   }
 
   .page {
@@ -388,14 +498,191 @@ button:focus-visible {
     padding: 0;
   }
 
+  /* Header */
+  .hero h1 {
+    font-size: 20pt;
+    letter-spacing: 0;
+    background: none;
+    color: #000000;
+  }
+
+  .role {
+    display: block;
+    margin-top: 2pt;
+    font-family: var(--font);
+    font-size: 11.5pt;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  .role::before {
+    content: none;
+  }
+
+  .contact {
+    display: block;
+    margin-top: 3pt;
+    font-size: 10pt;
+  }
+
+  .contact li,
+  .contact li.print-only {
+    display: inline !important;
+  }
+
+  .contact li + li::before {
+    content: " | ";
+    margin: 0;
+    color: #000000;
+  }
+
+  .contact a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .summary {
+    max-width: none;
+    margin-top: 0;
+    font-size: 10.5pt;
+  }
+
+  /* Section headings */
   .section,
-  .footer {
-    margin-top: 1.75rem;
+  .hero .section-title {
+    margin-top: 12pt;
+  }
+
+  .section-title {
+    margin-bottom: 5pt;
+    padding-bottom: 2pt;
+    border-bottom: 1px solid #000000;
+    color: #000000;
+    font-size: 11pt;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  /* Entries: one column, no cards */
+  .entries,
+  .cards {
+    display: block;
+  }
+
+  .entries > li + li,
+  .cards > li + li {
+    margin-top: 8pt;
+  }
+
+  .entry-card {
+    display: block;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .entry-title {
+    font-size: 10.5pt;
+  }
+
+  .entry-title a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .entry-sub {
+    margin-top: 0;
+    color: #000000;
+    font-size: 10.5pt;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .entry-period {
+    color: #000000;
+    font-size: 10pt;
+  }
+
+  .entry-desc,
+  .entry-bullets {
+    margin-top: 2pt;
+    color: #000000;
+    font-size: 10.5pt;
+  }
+
+  .entry-bullets li + li {
+    margin-top: 1pt;
+  }
+
+  .entry-bullets li::marker {
+    color: #000000;
+  }
+
+  /* Tags and skills print as plain comma-separated text */
+  .chips,
+  .entry-card .chips {
+    display: block;
+    margin-top: 1pt;
+    padding-top: 0;
+  }
+
+  .chips li,
+  .skill-group .chips li {
+    display: inline;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    color: #000000;
+    font-size: 10pt;
+    font-weight: 400;
+    line-height: inherit;
+  }
+
+  .chips li + li::before {
+    content: ", ";
+  }
+
+  .entry .chips::before {
+    content: "Technologies: ";
+    font-size: 10pt;
+    font-style: italic;
+  }
+
+  .skills {
+    display: block;
+  }
+
+  .skill-group {
+    display: block;
+  }
+
+  .skill-group + .skill-group {
+    margin-top: 2pt;
+  }
+
+  .skill-name {
+    display: inline;
+    font-size: 10.5pt;
+  }
+
+  .skill-name::after {
+    content: ": ";
+  }
+
+  .skill-group .chips {
+    display: inline;
   }
 
   .entry,
-  .skill-group,
-  .stats li {
+  .skill-group {
     break-inside: avoid;
+  }
+
+  .section-title {
+    break-after: avoid;
   }
 }

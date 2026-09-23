@@ -4,22 +4,24 @@ export const experience: Entry[] = [
   {
     title: 'Software Engineer',
     subtitle: 'Capital One / Discover Financial Services',
-    period: 'Jul 2020 – Oct 2026',
-    current: true,
+    period: 'July 2020 – October 2026',
     bullets: [
-      "Build and maintain customer-facing web applications for Discover Card and internal platforms for Discover Bank's Student Loans, Personal Loans, and Deposits businesses using React, TypeScript, and Spring Boot.",
-      'Streamline payments and transactions workflows, improving operational efficiency and reducing production defects.',
-      "Resolve critical issues affecting call center agents' ability to service customers by phone, and ship new features across React microfrontends, Spring services, and SQL databases.",
-      'Create developer tooling that speeds up teams: automated test suites, a shared component library, and a CLI generator.',
-      'Automate deployment pipelines, moving from on-prem Jenkins to Jenkins on Kubernetes in AWS, and monitor production with Datadog and Glassbox.',
+      'Built and maintained customer-facing web applications for Discover Card using React, TypeScript, and Spring Boot.',
+      "Developed internal platforms for Discover Bank's Student Loans, Personal Loans, and Deposits businesses.",
+      'Streamlined payment and transaction workflows, which improved operational efficiency and reduced production defects.',
+      "Resolved critical issues that affected call center agents' ability to serve customers by phone.",
+      'Shipped new features across React microfrontends, Spring services, and Structured Query Language (SQL) databases.',
+      'Created developer tooling that sped up teams, including automated test suites, a shared component library, and a command-line interface (CLI).',
+      'Automated deployment pipelines and migrated them from on-premises Jenkins to Jenkins on Kubernetes in Amazon Web Services (AWS).',
+      'Monitored production health with Datadog and Glassbox.',
     ],
   },
   {
     title: 'Campus Innovator (Intern)',
     subtitle: 'Discover Financial Services',
-    period: 'Jan 2019 – May 2020',
+    period: 'January 2019 – May 2020',
     bullets: [
-      'Built Spring Boot APIs and customer-facing web applications, including the Discover Spend Analyzer, that continues to serve customers at scale.',
+      'Built Spring Boot application programming interfaces (APIs) and customer-facing web applications, including the Discover Spend Analyzer, which went on to serve customers at scale.',
     ],
   },
 ];

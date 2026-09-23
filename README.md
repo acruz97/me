@@ -21,6 +21,17 @@ All page content lives in `src/assets/`:
 
 Styling (light and dark themes, responsive layout, print styles) is in `src/index.css`.
 
+## Build
+
+```bash
+npm run build
+```
+
+The build pre-renders the page into `dist/index.html` (via `src/entry-server.tsx` and
+`scripts/prerender.mjs`), so search engines, link previews, and ATS scrapers see the full
+text without running JavaScript. Search metadata, structured data, and link-preview tags
+live in `index.html`; `public/sitemap.xml` and `public/og-image.png` ship with the site.
+
 ## Deploy
 
 ```bash

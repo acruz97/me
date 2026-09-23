@@ -4,48 +4,48 @@ export const projects: Entry[] = [
   {
     title: 'Discover Spend Analyzer',
     description:
-      'Interactive web app that gives Discover cardholders insight into their spending, with D3 bar and pie charts, statements, rewards, and transactions. Built for 60M+ cardholders and tuned for both mobile and desktop.',
-    tags: ['React', 'D3'],
+      'Built an interactive web app that gave Discover cardholders insight into their spending through Data-Driven Documents (D3) bar and pie charts, statements, rewards, and transactions. It was designed for more than 60 million cardholders and optimized for both mobile and desktop.',
+    tags: ['React', 'Data-Driven Documents (D3)'],
   },
   {
     title: 'Bank Customer Servicing Platform',
     description:
-      "Web applications Discover Bank call center agents use to service customers by phone. Resolved critical issues affecting agents' ability to answer inquiries, simplified payment and transaction workflows, and added automation and observability.",
-    tags: ['React', 'Spring', 'MySQL', 'Eclipse SWT', 'Squish'],
+      "Developed web applications that Discover Bank call center agents used to serve customers by phone. Resolved critical issues that affected agents' ability to answer inquiries. Simplified payment and transaction workflows and added automation and observability.",
+    tags: ['React', 'Spring', 'MySQL', 'Eclipse Standard Widget Toolkit (SWT)', 'Squish'],
   },
   {
     title: 'Card Customer Servicing Platform',
     description:
-      'Resolved critical agent-facing issues and delivered new features for the platform agents use to handle cardholder calls, using a microfrontend architecture.',
+      'Resolved critical agent-facing issues and delivered new features for the microfrontend platform that agents used to handle cardholder calls.',
     tags: ['React Microfrontends', 'Spring', 'PostgreSQL'],
   },
   {
     title: 'Shared Servicing Platform',
     description:
-      'Maintained and extended shared services that automate the reading of disclosures to customers during live agent calls.',
+      'Maintained and extended shared services that automated the reading of disclosures to customers during live agent calls.',
     tags: ['React', 'Spring', 'PostgreSQL'],
   },
   {
     title: 'Banking Backend Services',
-    description: "Spring services powering Discover Bank's lending and deposit products.",
+    description: "Developed Spring services that powered Discover Bank's lending and deposit products.",
     tags: ['Java', 'Spring Boot'],
   },
   {
     title: 'React Component Library',
     description:
-      "Reusable, Storybook-documented component library for Discover Bank's Call Center platform. Standardized UI elements, accelerated development, and improved collaboration between engineers and process owners.",
+      "Created a reusable component library for Discover Bank's call center platform and documented it in Storybook. It standardized user interface (UI) elements, accelerated development, and improved collaboration between engineers and process owners.",
     tags: ['React', 'Storybook'],
   },
   {
     title: 'Developer Toolkit',
     description:
-      "Node.js CLI that automates React app and component generation for the Call Center platform, providing standardized templates and enforcing best practices.",
-    tags: ['Node.js', 'CLI'],
+      'Built a Node.js command-line interface (CLI) that automated React app and component generation for the call center platform. It provided standardized templates and enforced best practices.',
+    tags: ['Node.js', 'Command-Line Interface (CLI)'],
   },
   {
     title: 'Automated Test Suite',
     description:
-      'JavaScript testing framework for desktop applications that replaced manual workflows, improving accuracy and standardizing evidence collection.',
+      'Developed a JavaScript testing framework for desktop applications that replaced manual workflows. It improved accuracy and standardized evidence collection.',
     tags: ['JavaScript', 'Cucumber'],
   },
 ];
